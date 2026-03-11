@@ -2,11 +2,11 @@ import React from "react";
 
 function Result({ result }) {
 
-  return (
-    <div style={{marginTop:"20px"}}>
-      <h2>Result</h2>
+  if(!result) return null;
 
-      <div style={{
+  return (
+
+    <div className="result-card"style={{
         background:"#fff",
         padding:"15px",
         width:"400px",
@@ -14,11 +14,13 @@ function Result({ result }) {
         borderRadius:"8px",
         boxShadow:"0 2px 8px rgba(0,0,0,0.2)"
       }}>
-        <p>{result}</p>
-      </div>
 
+      <h2>Analysis Result</h2>
+
+      <p>{result}</p>
     </div>
   );
+
 }
 
 export default Result;

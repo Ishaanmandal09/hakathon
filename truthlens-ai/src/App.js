@@ -31,15 +31,39 @@ Confidence: ${aiResult.confidence}%`);
 
     }
   };
+return (
+    <div className="container">
 
-  return (
-    <div className="app">
+      <h1 className="title">TruthLens AI</h1>
 
-      <h1>TruthLens AI</h1>
+      <div className="info-card">
+        <h2>How to Use</h2>
+        <p>
+          Paste any news headline or article into the text box and click
+          <b> "Check News"</b>.  
+          Our AI analyzes the language patterns and detects whether the
+          content might be misleading or trustworthy.
+        </p>
+      </div>
 
       <NewsInput analyze={analyzeNews} />
 
       <Result result={result} />
+
+      <div className="info-card">
+        <h2>How Results Work</h2>
+
+        <p>
+        ⚠️ <b>Fake News</b> means the system detected suspicious language,
+        exaggerated claims, or patterns commonly found in misinformation.
+        </p>
+
+        <p>
+        ✅ <b>Real News</b> means the content appears credible and does not
+        match typical misinformation patterns.
+        </p>
+
+      </div>
 
     </div>
   );
